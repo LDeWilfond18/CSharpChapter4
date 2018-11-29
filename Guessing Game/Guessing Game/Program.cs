@@ -11,7 +11,11 @@ namespace Guessing_Game
     {
         static void Main(string[] args)
         {
-            int min = 1;
+            DisplayGame();
+        }
+        static void DisplayGame()
+        {
+        int min = 1;
             int max = 11;
             int guess;
             string guessString;
@@ -46,8 +50,14 @@ namespace Guessing_Game
                 }
                 else
                     result = "Error";
-                WriteLine(result);
+                DisplayString(result);
             } while (randomNumber != guess);
+            
+        }
+        
+        static void DisplayString(string result)
+        {
+            WriteLine(result);
         }
     }
 }
